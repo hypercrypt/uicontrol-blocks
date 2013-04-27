@@ -1,11 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "uicontrol-blocks"
   s.version      = "1.0.0"
-  s.summary      = "UIControl (Blocks)"
+  s.summary      = "This category adds block support block based callbacks for UIControlEvents to UIControl."
   s.description  = <<-DESC
-  This category adds block support block based callbacks for UIControlEvents to UIControl.
-
-  Simply call -[UIControl addActionForControlEvents:usingBlock:] to add an action block. Use -[UIControl removeAction:] to remove actions again.
+    Simply call -[UIControl addActionForControlEvents:usingBlock:] to add an action block. Use -[UIControl removeAction:] to remove actions again.
   DESC
   s.homepage     = "https://github.com/hypercrypt/uicontrol-blocks"
 
