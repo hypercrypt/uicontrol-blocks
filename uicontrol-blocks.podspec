@@ -1,10 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = "uicontrol-blocks"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "This category adds block support block based callbacks for UIControlEvents to UIControl."
-  s.description  = <<-DESC
-    Simply call -[UIControl addActionForControlEvents:usingBlock:] to add an action block. Use -[UIControl removeAction:] to remove actions again.
-  DESC
+  s.description  = "Simply call -[UIControl addActionForControlEvents:usingBlock:] to add an action block. Use -[UIControl removeAction:] to remove actions again."
   s.homepage     = "https://github.com/hypercrypt/uicontrol-blocks"
 
   s.license      = { :type => 'BSD', :file => 'LICENSE' }
@@ -13,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.source       = {
       :git => "https://github.com/hypercrypt/uicontrol-blocks.git",
-      :tag => "1.0.0"
+      :tag => "1.1.0"
   }
 
   s.platform     = :ios, '5.0'

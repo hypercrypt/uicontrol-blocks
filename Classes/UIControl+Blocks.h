@@ -38,8 +38,28 @@ typedef void(^UIControlBlocksActionBlock)(UIControl *sender, UIEvent *event);
 
 @interface UIControl (Blocks)
 
-- (id)addActionForControlEvents:(UIControlEvents)controlEvents usingBlock:(UIControlBlocksActionBlock)block;
+/**
+ * Adds an action for the passed \c controlEvents unsing the passed \c block.
+ * This method may be called multiple times and does not override the existing actions, just as
+ * \c -addTarget:action:forControlEvents: behaves.
+ * @param controlEvents The \c UIControlEvents for which the \c block should be executed.
+ * @param block The block to execute.
+ * @returns An opaque handler to remove an action again. This is retained internally and may be
+ * assigned to a weak variable. As per Cocoa naming conventions,
+ * ownership is *NOT* transfered to the caller.
+ */
+- (id)addActionForControlEvents:(UIControlEvents)controlEvents
+                     usingBlock:(UIControlBlocksActionBlock)block;
+
+/**
+ * Removes all actions that have previously been added.
+ */
 - (void)removeAllActions;
+
+/**
+ * Removes a specific action for all associated \c UIControlEvents.
+ * @param An object returned from \c -addActionForControlEvents:usingBlock:.
+ */
 - (void)removeAction:(id)action;
 
 @end
